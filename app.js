@@ -34,6 +34,8 @@ app.get('/', (req, res) => {
   res.json({ success: true, message: 'Welcome to backend zone!' });
 });
 
-app.listen(8000, () => {
-  console.log('port is listening on port 8000');
+const PORT = process.env.PORT;
+
+app.listen(PORT, () => {
+	console.log('Server is running on port ' + PORT);
 });
