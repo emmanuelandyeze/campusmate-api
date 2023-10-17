@@ -1,0 +1,23 @@
+{
+  "name": "campusmate",
+  "version": "1.0.0",
+  "description": "The Student's Companion",
+  "main": "app.js",
+  "scripts": {
+    "start": "nodemon app.js"
+  },
+  "author": "Emmanuel Eze",
+  "license": "ISC",
+  "dependencies": {
+    "bcrypt": "^5.0.1",
+    "cloudinary": "^1.25.1",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.10.0",
+    "jsonwebtoken": "^8.5.1",
+    "mongoose": "^5.12.4",
+    "multer": "^1.4.2",
+    "nodemon": "^2.0.7",
+    "sharp": "^0.28.1"
+  }
+}
