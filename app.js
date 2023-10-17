@@ -1,9 +1,9 @@
-const express = require('express');
-require('dotenv').config();
-require('./models/db');
-const userRouter = require('./routes/user');
+import express from 'express';
+import 'dotenv/config';
+import './models/db.js';
+import userRouter from './routes/user.js';
 
-const User = require('./models/user');
+import User from './models/user.js';
 
 const app = express();
 
@@ -26,7 +26,7 @@ app.use(userRouter);
 
 // test('niraj@email.com', 'niraj12');
 
-app.get('/', (req, res) => {
+app.get('/api', (req, res) => {
 	res.json({
 		success: true,
 		message: 'Welcome to backend zone!',
@@ -36,8 +36,6 @@ app.get('/', (req, res) => {
 app.get('/test', (req, res) => {
 	res.send('Hello world');
 });
-
-
 
 const PORT = process.env.PORT;
 
