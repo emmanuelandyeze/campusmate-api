@@ -26,13 +26,18 @@ app.use(userRouter);
 
 // test('niraj@email.com', 'niraj12');
 
-app.get('/test', (req, res) => {
-  res.send('Hello world');
+app.get('/', (req, res) => {
+	res.json({
+		success: true,
+		message: 'Welcome to backend zone!',
+	});
 });
 
-app.get('/', (req, res) => {
-  res.json({ success: true, message: 'Welcome to backend zone!' });
+app.get('/test', (req, res) => {
+	res.send('Hello world');
 });
+
+
 
 const PORT = process.env.PORT;
 
